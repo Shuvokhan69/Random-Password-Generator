@@ -1,0 +1,259 @@
+:root {
+        --primary: #4361ee;
+        --primary-dark: #3a56d4;
+        --secondary: #7209b7;
+        --accent: #f72585;
+        --light: #f8f9fa;
+        --dark: #212529;
+        --success: #4cc9f0;
+        --danger: #f72585;
+        --gray: #6c757d;
+        --border-radius: 12px;
+        --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        --transition: all 0.3s ease;
+        --bg-primary: #0f172a;
+        --bg-secondary: #1e293b;
+        --glass: rgba(255,255,255,0.08);
+        --accent: #6366f1;
+        --accent-hover: #818cf8;
+        --text-primary: #f1f5f9;
+        --text-secondary: #94a3b8;
+        --danger: #ef4444;
+        --success: #10b981;
+        --radius: 16px;
+        --shadow: 0 8px 32px rgba(0,0,0,0.2);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Inter', -apple-system, sans-serif;
+      }
+
+      body {
+        background: linear-gradient(135deg, var(--bg-primary), var(--bg-secondary));
+        color: var(--text-primary);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+      }
+
+      .container {
+        max-width: 800px;
+        width: 100%;
+        background: rgba(255,255,255,0.05);
+        backdrop-filter: blur(16px);
+        border: 1px solid rgba(255,255,255,0.1);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        padding: 2.5rem;
+      }
+
+      h1 {
+        background: linear-gradient(to right, var(--accent), var(--accent-hover));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .card {
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.05);
+        border-radius: var(--radius);
+        padding: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .card-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .card-title i {
+        color: var(--accent);
+      }
+
+      .input-group {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .input-row {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        width: 100%;
+      }
+
+      .input-row input[type="number"] {
+        flex: 1 1 auto;
+        min-width: 140px;
+      }
+
+      label {
+        color: var(--text-secondary);
+        font-weight: 500;
+        min-width: 150px;
+      }
+
+      input[type="number"] {
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.1);
+        color: var(--text-primary);
+        padding: 0.75rem 1rem;
+        border-radius: var(--radius);
+        width: 100%;
+        transition: all 0.3s ease;
+      }
+
+      input[type="number"]:focus {
+        outline: none;
+        border-color: var(--accent);
+        box-shadow: 0 0 0 3px rgba(99,102,241,0.1);
+      }
+
+      /* Remove native number input spinner/arrows */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+      .btn-group {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+        justify-content: flex-end;
+        flex: 0 0 auto;
+      }
+
+      /* Ensure buttons sit side-by-side and don't force full width */
+      button {
+        padding: 0.75rem 1.25rem;
+        border: none;
+        border-radius: var(--radius);
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        min-width: 120px;
+        flex: 0 0 auto;
+      }
+
+      #btn {
+        background: var(--accent);
+        color: white;
+      }
+
+      #btn:hover {
+        background: var(--accent-hover);
+        transform: translateY(-2px);
+      }
+
+      .clearbtn {
+        background: var(--danger);
+        color: white;
+      }
+
+      .copy-btn {
+        background: var(--success);
+        color: white;
+      }
+
+      .display {
+        margin-top: 2rem;
+      }
+
+      .password-list {
+        max-height: 300px;
+        overflow-y: auto;
+        padding-right: 0.5rem;
+      }
+
+      .password-list::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      .password-list::-webkit-scrollbar-track {
+        background: rgba(255,255,255,0.03);
+        border-radius: 3px;
+      }
+
+      .password-list::-webkit-scrollbar-thumb {
+        background: var(--accent);
+        border-radius: 3px;
+      }
+
+      .output {
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.05);
+        padding: 1rem;
+        border-radius: var(--radius);
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.3s ease;
+      }
+
+      .output:hover {
+        background: rgba(255,255,255,0.05);
+        transform: translateY(-2px);
+      }
+
+      .empty-state {
+        text-align: center;
+        color: var(--text-secondary);
+        padding: 2rem;
+      }
+
+      .empty-state i {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: #dee2e6;
+      }
+
+      footer {
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        margin-top: auto;
+        font-size: 0.9rem;
+        opacity: 0.8;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .container {
+          padding: 1.5rem;
+        }
+        
+        .input-row {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        
+        label {
+          min-width: auto;
+          margin-bottom: 0.5rem;
+        }
+        
+        /* keep buttons on the same row on most mobile widths;
+           they will wrap only if there's not enough space */
+        .btn-group {
+          flex-direction: row;
+          gap: 0.5rem;
+        }
+      }
